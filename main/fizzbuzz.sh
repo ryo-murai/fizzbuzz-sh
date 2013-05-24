@@ -1,5 +1,6 @@
 #!/bin/bash
 
-. fizzbuzz.inc
+. `dirname $0`/fizzbuzz.inc
 
-for i in {1..100}; do pfizbuz $i; done
+range=`eval echo "{1..${1:-100}}"`
+for i in $range; do pfizbuz $i; done
